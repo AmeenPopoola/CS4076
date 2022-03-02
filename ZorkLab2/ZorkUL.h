@@ -12,7 +12,7 @@ using namespace std;
 class ZorkUL {
 private:
     Parser parser;
-     vector<Room*> rooms;
+     vector<Room*> rooms; 
     Room *currentRoom;
     void createRooms();
     void printWelcome();
