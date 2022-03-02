@@ -192,7 +192,7 @@ string ZorkUL::go(string direction) {
         return currentRoom->longDescription();
     }
 }
-
+//lab
     void ZorkUL::teleport(string room){
         if(room.compare("rand") == 0){
             unsigned int roomSize = rooms.size();
