@@ -1,6 +1,7 @@
 #include "item.h"
 
-Item::Item (string inDescription, int inWeightGrams, float inValue/**, int weaponCheck*/) {
+//use of default parameters
+Item::Item (string inDescription , int inWeightGrams = 0, float inValue = 0.0/**, int weaponCheck*/) {
 	description = inDescription;
 	setWeight(inWeightGrams);
 	value = inValue;
