@@ -31,6 +31,8 @@ private slots:
 
     void on_West_clicked();
 
+    void on_quit_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
