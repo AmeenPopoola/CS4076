@@ -1,9 +1,17 @@
 #include <iostream>
+#include "item.h"
+#include "Artifact.h"
+#include "mainwindow.h"
+#include <QApplication>
 
 using namespace std;
 #include "ZorkUL.h"
 
 int main(int argc, char* argv[]) {
+    /*QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
+    return a.exec();*/
 	ZorkUL temp;
 	temp.play();
 	return 0;
@@ -15,26 +23,26 @@ ZorkUL::ZorkUL() {
 
 //use of inline function
 inline void ZorkUL::createRooms()  {
-    Room *a, *b, *c, *d, *e;
+    Room *a, *b, *c, *d, *e , *f;
 
     a = new Room("Centre");
-        a->addItem(new Item("x", 1, 11));
-        a->addItem(new Item("y", 2, 22));
+        a->addItem(new Artifact("Crown", 8, 150 , 2000));
+        a->addItem(new Artifact("Amulet", 2, 220 , 1000));
     b = new Room("Kar's Tomb");
-        b->addItem(new Item("xx", 3, 33));
-        b->addItem(new Item("yy", 4, 44));
+        b->addItem(new Artifact("Bracelet", 3, 330 , 3500));
+        b->addItem(new Artifact("Earrings", 4, 500 , 2405));
     c = new Room("Santana's Tomb");
     d = new Room("Wamuu's Tomb");
     e = new Room("Esidisi's Tomb");
-
+    f = new Room("Dio's Tomb");
 
 //             (N, E, S, W)
-    a->setExits(d, c, e, b);
+    a->setExits(d, c, NULL, b);
     b->setExits(NULL, a, NULL, NULL);
-    c->setExits(NULL,NULL, NULL, a);
+    c->setExits(NULL,f, e, a);
     d->setExits(NULL, NULL, a, NULL);
-    e->setExits(a, NULL, NULL, NULL);
-
+    e->setExits(c, NULL, NULL, NULL);
+    f->setExits(NULL, NULL, NULL, c);
 
         currentRoom = a;
 }
@@ -64,7 +72,7 @@ void ZorkUL::play() {
 
 void ZorkUL::printWelcome() {
 	cout << "start"<< endl;
-	cout << "info for help"<< endl;
+    cout << "You are stranded in the Forbidden Pyramids of Egypt!!"<< endl;
 	cout << endl;
     cout << currentRoom->longDescription() << endl;
 }
@@ -86,13 +94,13 @@ bool ZorkUL::processCommand(Command command) {
 
 	else if (commandWord.compare("map") == 0)
 		{
-        cout << "        [d] " << endl;
-		cout << "         |         " << endl;
-        cout << "         |         " << endl;
-        cout << "[b] --- [a] --- [c]" << endl;
-		cout << "         |         " << endl;
-		cout << "         |         " << endl;
-        cout << "        [e] " << endl;
+        cout << "        [d] "              << endl;
+        cout << "         |         "       << endl;
+        cout << "         |         "       << endl;
+        cout << "[b] --- [a]---[c]--- [f]"  << endl;
+        cout << "               |         " << endl;
+        cout << "               |         " << endl;
+        cout << "              [e] "        << endl;
 		}
 
 	else if (commandWord.compare("go") == 0)

@@ -3,6 +3,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CONFIG += console c++11
 
 SOURCES += \
+        Artifact.cpp \
         Character.cpp \
         Command.cpp \
         CommandWords.cpp \
@@ -14,6 +15,7 @@ SOURCES += \
         mainwindow.cpp
 
 HEADERS += \
+    Artifact.h \
     Character.h \
     Command.h \
     CommandWords.h \

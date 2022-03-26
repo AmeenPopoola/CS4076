@@ -28,6 +28,14 @@ void Item::setValue(float inValue)
 	   value = inValue;
 }
 
+int Item::getWeight(){
+    return weightGrams;
+}
+
+float Item::getValue(){
+    return value;
+}
+
 /**void Item::setWeaponCheck(int isWeapon)
 {
     if(isWeapon > 0 || isWeapon < 0)
