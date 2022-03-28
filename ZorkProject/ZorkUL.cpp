@@ -71,7 +71,7 @@ void ZorkUL::play() {
 }
 
 void ZorkUL::printWelcome() {
-	cout << "start"<< endl;
+    cout << "Welcome"<< endl;
     cout << "You are stranded in the Forbidden Pyramids of Egypt!!"<< endl;
 	cout << endl;
     cout << currentRoom->longDescription() << endl;
@@ -113,12 +113,12 @@ bool ZorkUL::processCommand(Command command) {
         }
         else
          if (command.hasSecondWord()) {
-        cout << "you're trying to take " + command.getSecondWord() << endl;
+        cout << "you're trying to take the " + command.getSecondWord() << endl;
         int location = currentRoom->isItemInRoom(command.getSecondWord());
         if (location  < 0 )
-            cout << "item is not in room" << endl;
+            cout << "That item you are trying to take is not in this room " << endl;
         else
-            cout << "item is in room" << endl;
+            cout << "You have picked up the " << command.getSecondWord() << endl;
             cout << "index number " << + location << endl;
             cout << endl;
             cout << currentRoom->longDescription() << endl;

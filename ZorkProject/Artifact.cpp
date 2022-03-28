@@ -4,6 +4,9 @@ Artifact::Artifact(string description, int weight , float value , int age) : Ite
     setAge(age);
 }
 
+Artifact::~Artifact(){
+}
+
 void Artifact::setAge(int years){
     this->age = years;
 }

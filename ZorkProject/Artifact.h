@@ -11,6 +11,7 @@ class Artifact : public Item {
 
     public:
      Artifact(string description , int weight , float value , int age);
+     ~Artifact();
      void setAge(int age);
      int getAge();
      virtual string getLongDescription();

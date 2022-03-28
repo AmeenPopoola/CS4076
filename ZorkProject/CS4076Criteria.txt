@@ -1,0 +1,47 @@
+Virtual functions --> DONE
+
+**template classes
+
+Multiple inheritance --> OPTION
+
+namespaces --> DONE
+
+Programmer defined exceptions
+
+Unions
+
+Operator overloading
+
+**Abstract classes
+
+**Copy constructors (deep , shallow copy)
+
+Bit structures
+
+Advanced pre-processor directives
+
+C++ Object Construction Sequence
+
+Initializer List
+
+C++ References-->DONE
+
+Pointers-> DONE
+
+Inheritance --> DONE
+
+Destructors --> DONE
+
+Memory management
+
+Header files (inclusion guards) --> DONE
+
+**Arrays and pointers
+
+**Friendship
+
+**Global variables
+
+Private, Public, Protected --> DONE
+
+8/23
