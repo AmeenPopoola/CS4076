@@ -1,11 +1,9 @@
 #include "item.h"
 
 //use of default parameters
-Item::Item (string inDescription , int inWeightGrams = 0, float inValue = 0.0/**, int weaponCheck*/) {
+Item::Item (string inDescription , int inWeightGrams = 0, float inValue = 0.0):value(inValue) {
 	description = inDescription;
-	setWeight(inWeightGrams);
-	value = inValue;
-	/**weaponCheck(isWeapon);*/
+    setWeight(inWeightGrams);
 }
 
 Item::Item(string inDescription) {
@@ -36,13 +34,6 @@ float Item::getValue(){
     return value;
 }
 
-/**void Item::setWeaponCheck(int isWeapon)
-{
-    if(isWeapon > 0 || isWeapon < 0)
-        cout << "Item not a weapon" ;
-    else
-        cout << "Item is a weapon" ;
-}*/
 
 string Item::getShortDescription()
 {

@@ -1,6 +1,8 @@
 #include <iostream>
 #include "item.h"
 #include "Artifact.h"
+#include "enemy.h"
+#include "mummy.h"
 #include "mainwindow.h"
 #include <QApplication>
 
@@ -31,6 +33,7 @@ inline void ZorkUL::createRooms()  {
     b = new Room("Kar's Tomb");
         b->addItem(new Artifact("Bracelet", 3, 330 , 3500));
         b->addItem(new Artifact("Earrings", 4, 500 , 2405));
+        b->addEnemy(new mummy("Stratos", 50 , 240));
     c = new Room("Santana's Tomb");
     d = new Room("Wamuu's Tomb");
     e = new Room("Esidisi's Tomb");
@@ -92,7 +95,7 @@ bool ZorkUL::processCommand(Command command) {
 	if (commandWord.compare("info") == 0)
 		printHelp();
 
-	else if (commandWord.compare("map") == 0)
+    /*else if (commandWord.compare("map") == 0)
 		{
         cout << "        [d] "              << endl;
         cout << "         |         "       << endl;
@@ -101,7 +104,7 @@ bool ZorkUL::processCommand(Command command) {
         cout << "               |         " << endl;
         cout << "               |         " << endl;
         cout << "              [e] "        << endl;
-		}
+        }*/
 
 	else if (commandWord.compare("go") == 0)
 		goRoom(command);
@@ -181,7 +184,7 @@ string ZorkUL::go(string direction) {
 	//Move to the next room
 	Room* nextRoom = currentRoom->nextRoom(direction);
 	if (nextRoom == NULL)
-		return("direction null");
+        return("You can't go this way");
 	else
 	{
 		currentRoom = nextRoom;

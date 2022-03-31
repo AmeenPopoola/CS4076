@@ -1,6 +1,6 @@
 Virtual functions --> DONE
 
-**template classes
+template classes --> DONE
 
 Multiple inheritance --> OPTION
 
@@ -22,7 +22,7 @@ Advanced pre-processor directives
 
 C++ Object Construction Sequence
 
-Initializer List
+Initializer List --> DONE
 
 C++ References-->DONE
 
@@ -44,4 +44,4 @@ Header files (inclusion guards) --> DONE
 
 Private, Public, Protected --> DONE
 
-8/23
+10/23

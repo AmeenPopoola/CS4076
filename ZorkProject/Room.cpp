@@ -41,6 +41,10 @@ Room* Room::nextRoom(string direction) {
 				// part of the "pair" (<string, Room*>) and return it.
 }
 
+void Room::addEnemy(enemy *inEnemy){
+    enemyInRoom.push_back(*inEnemy);
+}
+
 void Room::addItem(Item *inItem) {
     //cout <<endl;
     //cout << "Just added" + inItem->getLongDescription();
