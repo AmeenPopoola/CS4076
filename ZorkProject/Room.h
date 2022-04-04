@@ -11,7 +11,6 @@ using std::vector;
 
 class Room {
 
-    friend class enemy;
 
 protected:
     string description;

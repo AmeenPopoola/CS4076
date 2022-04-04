@@ -19,6 +19,7 @@ public:
     Item (string description);
 	string getShortDescription();
     string getLongDescription();
+    bool operator==(Item &i);
 	int getWeight();
 	void setWeight(int weightGrams);
 	float getValue();

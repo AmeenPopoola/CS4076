@@ -5,9 +5,12 @@
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow),
+    zork(new ZorkUL())
 {
     ui->setupUi(this);
+    ui->textBox->append(QString::fromStdString(zork->printWelcome()));
+
     QPixmap mapPic("C:/Users/ameen/Downloads/MapGUI.png");
     int w = ui->map->width();
     int h = ui->map->height();
@@ -22,18 +25,21 @@ MainWindow::~MainWindow()
 void MainWindow::on_North_clicked()
 {
       ui->dirLabel->setText("NORTH");
+      inRoom("North");
 }
 
 
 void MainWindow::on_South_clicked()
 {
       ui->dirLabel->setText("SOUTH");
+      inRoom("South");
 }
 
 
 void MainWindow::on_East_clicked()
 {
       ui->dirLabel->setText("EAST");
+      inRoom("East");
 }
 
 
@@ -41,6 +47,7 @@ void MainWindow::on_East_clicked()
 void MainWindow::on_West_clicked()
 {
       ui->dirLabel->setText("WEST");
+      inRoom("West");
 }
 
 
@@ -56,4 +63,13 @@ void MainWindow::on_quit_clicked()
 
     }
 
+
+void MainWindow::inRoom(string direction){
+       ui->textBox->append(QString::fromStdString(zork->go(direction) + "\n"));
+}
+
+void MainWindow::on_Help_clicked()
+{
+      ui->textBox->append(QString::fromStdString(zork->printHelp()));
+}
 

@@ -9,7 +9,7 @@
 
 class mummy : public enemy {
 
-    friend class Room;
+
 
 private:
     int age;

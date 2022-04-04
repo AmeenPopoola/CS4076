@@ -10,10 +10,10 @@ using namespace std;
 #include "ZorkUL.h"
 
 int main(int argc, char* argv[]) {
-    /*QApplication a(argc, argv);
+    QApplication a(argc, argv);
     MainWindow w;
     w.show();
-    return a.exec();*/
+    return a.exec();
 	ZorkUL temp;
 	temp.play();
 	return 0;
@@ -38,6 +38,13 @@ inline void ZorkUL::createRooms()  {
     d = new Room("Wamuu's Tomb");
     e = new Room("Esidisi's Tomb");
     f = new Room("Dio's Tomb");
+
+    roomList[0] = a;
+    roomList[1] = b;
+    roomList[2] = c;
+    roomList[3] = d;
+    roomList[4] = e;
+    roomList[5] = f;
 
 //             (N, E, S, W)
     a->setExits(d, c, NULL, b);
@@ -73,11 +80,9 @@ void ZorkUL::play() {
 	cout << "end" << endl;
 }
 
-void ZorkUL::printWelcome() {
-    cout << "Welcome"<< endl;
-    cout << "You are stranded in the Forbidden Pyramids of Egypt!!"<< endl;
-	cout << endl;
-    cout << currentRoom->longDescription() << endl;
+string ZorkUL::printWelcome() {
+     return "Welcome\nYou are stranded in the Forbidden Pyramids of Egypt!!\n" +
+            currentRoom->longDescription();
 }
 
 /**
@@ -153,10 +158,8 @@ bool ZorkUL::processCommand(Command command) {
 	return false;
 }
 /** COMMANDS **/
-void ZorkUL::printHelp() {
-	cout << "valid inputs are; " << endl;
-	parser.showCommands();
-
+string ZorkUL::printHelp() {
+    return "*Use Direction Buttons(NSFW) to move\n*Pick Up Button to pick up item in Room\n*Put Button to put down item\n*Help Button for info\n*Quit Button to quit game\n";
 }
 
 void ZorkUL::goRoom(Command command) {
@@ -190,4 +193,8 @@ string ZorkUL::go(string direction) {
 		currentRoom = nextRoom;
         return currentRoom->longDescription();
 	}
+}
+
+Room* ZorkUL::getRoom(){
+    return currentRoom;
 }

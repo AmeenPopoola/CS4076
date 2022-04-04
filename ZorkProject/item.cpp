@@ -10,6 +10,18 @@ Item::Item(string inDescription) {
 	description = inDescription;
 }
 
+bool Item::operator==(Item &i)
+{
+    int test = 0;
+
+    if (this->getShortDescription() == i.getShortDescription())
+    {
+        test = 1;
+    }
+
+    return test;
+}
+
 void Item::setWeight(int inWeightGrams)
 {
     if (inWeightGrams > 9999 || inWeightGrams < 0)

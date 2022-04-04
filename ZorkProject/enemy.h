@@ -7,7 +7,7 @@ using namespace std;
 
 class enemy {
 
-    friend class Room;
+
 
 protected :
     string description;
@@ -19,7 +19,7 @@ public:
     template <typename T>
         void setDamage(const T& damge);
     virtual string getDescription() ;
-    virtual int getDamage();
+    virtual int getDamage() ;
 
 };
 

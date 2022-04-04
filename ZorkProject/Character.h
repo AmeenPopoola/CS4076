@@ -9,6 +9,7 @@ using std::vector;
 
 
 class Character {
+    friend class Mainwindow;
 private:
 	string description;
     string name;
