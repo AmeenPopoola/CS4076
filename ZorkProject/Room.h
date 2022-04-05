@@ -11,6 +11,7 @@ using std::vector;
 
 class Room {
 
+    friend class MainWindow;
 
 protected:
     string description;

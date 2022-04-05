@@ -8,13 +8,13 @@ Room::Room(string description) {
 
 void Room::setExits(Room *north, Room *east, Room *south, Room *west) {
 	if (north != NULL)
-		exits["north"] = north;
+        exits["North"] = north;
 	if (east != NULL)
-		exits["east"] = east;
+        exits["East"] = east;
 	if (south != NULL)
-		exits["south"] = south;
+        exits["South"] = south;
 	if (west != NULL)
-		exits["west"] = west;
+        exits["West"] = west;
 }
 
 string Room::shortDescription() {

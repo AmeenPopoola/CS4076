@@ -3,6 +3,7 @@
 
 #include "Room.h"
 #include "item.h"
+#include "Character.h"
 #include "ZorkUL.h"
 #include <iostream>
 #include <string>
@@ -24,6 +25,8 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void endGame(string message);
+    void addListWidget(vector<Item> item);
 
 private slots:
     void on_North_clicked();
@@ -42,6 +45,10 @@ private:
     Ui::MainWindow *ui;
     ZorkUL *zork;
     void inRoom(string direction);
+    Character character = *new Character("Jojo" , "Explorer");
+    bool placeInInventory;
+    void listItems(vector<Item> items , QString description);
+
 };
 
 #endif // MAINWINDOW_H

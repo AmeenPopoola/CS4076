@@ -11,10 +11,15 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     ui->textBox->append(QString::fromStdString(zork->printWelcome()));
 
-    QPixmap mapPic("C:/Users/ameen/Downloads/MapGUI.png");
-    int w = ui->map->width();
-    int h = ui->map->height();
-    ui->map->setPixmap(mapPic.scaled(w,h,Qt::KeepAspectRatio));
+    QPixmap mapPic("C:/CS4076/April/images/MapGUI.png");
+   // int w = ui->map->width();
+    //int h = ui->map->height();
+    ui->map->setPixmap(mapPic/*.scaled(w,h,Qt::KeepAspectRatio)*/);
+
+    QPixmap room("C:/CS4076/April/images/roomA.jpg");
+    //int y = ui->roomPic->width();
+    //int x = ui->roomPic->height();
+    ui->roomPic->setPixmap(room/*.scaled(x,y,Qt::KeepAspectRatio)*/);
 }
 
 MainWindow::~MainWindow()
@@ -63,13 +68,26 @@ void MainWindow::on_quit_clicked()
 
     }
 
-
-void MainWindow::inRoom(string direction){
-       ui->textBox->append(QString::fromStdString(zork->go(direction) + "\n"));
-}
-
 void MainWindow::on_Help_clicked()
 {
       ui->textBox->append(QString::fromStdString(zork->printHelp()));
 }
 
+void MainWindow::inRoom(string direction){
+       ui->textBox->append(QString::fromStdString(zork->go(direction) + "\n"));
+       if(zork->getRoom()->description == "Dio's Tomb"){
+           endGame("entered the escape room");
+       }
+}
+
+void MainWindow::endGame(string message){
+    ui->East->setEnabled(false);
+    ui->Help->setEnabled(false);
+    ui->North->setEnabled(false);
+    ui->pick_up->setEnabled(false);
+    ui->West->setEnabled(false);
+    ui->South->setEnabled(false);
+    ui->inventory->setEnabled(false);
+
+    ui->textBox->setText(QString::fromStdString(character.description + " has " + message + ". You have succesfully escaped.\n"));
+}

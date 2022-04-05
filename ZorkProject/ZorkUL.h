@@ -27,7 +27,7 @@ public:
     string printHelp();
 	void play();
     string go(string direction);
-    Room *getRoom();
+    Room* getRoom();
 };
 
 #endif /*ZORKUL_H_*/

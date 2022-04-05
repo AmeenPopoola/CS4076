@@ -9,7 +9,7 @@ using std::vector;
 
 
 class Character {
-    friend class Mainwindow;
+    friend class MainWindow;
 private:
 	string description;
     string name;
