@@ -1,4 +1,4 @@
-#include "enemy.h"
+/*#include "enemy.h"
 
 #include <string>
 #include <iostream>
@@ -26,4 +26,4 @@ string enemy::getDescription(){
 
 int enemy::getDamage(){
     return this ->damage;
-}
+}*/

@@ -41,15 +41,16 @@ Room* Room::nextRoom(string direction) {
 				// part of the "pair" (<string, Room*>) and return it.
 }
 
-void Room::addEnemy(enemy *inEnemy){
+/*void Room::addEnemy(enemy *inEnemy){
     enemyInRoom.push_back(*inEnemy);
-}
+}*/
 
 void Room::addItem(Item *inItem) {
     //cout <<endl;
     //cout << "Just added" + inItem->getLongDescription();
     itemsInRoom.push_back(*inItem);
 }
+
 
 string Room::displayItem() {
     string tempString = "items in room = ";
@@ -69,6 +70,18 @@ string Room::displayItem() {
 
 int Room::numberOfItems() {
     return itemsInRoom.size();
+}
+
+vector<Item> Room::viewItems(){
+    return itemsInRoom;
+}
+
+bool Room::allItemsCollected(){
+    if(itemsInRoom.empty()){
+        return true;
+    }else {
+        return false;
+    }
 }
 
 int Room::isItemInRoom(string inString)

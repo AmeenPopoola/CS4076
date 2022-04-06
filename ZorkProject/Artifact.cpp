@@ -1,6 +1,6 @@
 #include "Artifact.h"
-#include <sstream>
-Artifact::Artifact(string description, int weight , float value , int age) : Item(description,weight,value){
+#include <iostream>
+Artifact::Artifact(string description, int weight , float value , int age = 0) : Item(description,weight,value){
     setAge(age);
 }
 
@@ -16,8 +16,6 @@ int Artifact::getAge(){
 }
 
 string Artifact::getLongDescription(){
-    stringstream desc;
-   desc << "Artifact Name: " << getShortDescription() << endl << " | Value: "<< to_string(getValue()) << " | Weight: " << getWeight() << endl << " | Age Of This Artifact: "
-         << getAge();
-   return desc.str();
+
+  return "Artifact Name: " + description + "\n";
 }

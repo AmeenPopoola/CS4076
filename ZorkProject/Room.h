@@ -18,7 +18,7 @@ protected:
 	map<string, Room*> exits;
 	string exitString();
     vector <Item> itemsInRoom;
-    vector <enemy> enemyInRoom;
+   // vector <enemy> enemyInRoom;
 
 
 public:
@@ -29,10 +29,12 @@ public:
     string longDescription();
 	Room* nextRoom(string direction);
     void addItem(Item *inItem);
-    void addEnemy(enemy *inEnemy );
+    //void addEnemy(enemy *inEnemy );
+    vector<Item> viewItems();
     string displayItem();
     int isItemInRoom(string inString);
     void removeItemFromRoom(int location);
+    bool allItemsCollected();
 };
 
 #endif

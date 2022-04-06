@@ -26,7 +26,7 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void endGame(string message);
-    void addListWidget(vector<Item> item);
+    void addToListWidget(vector<Item> item);
 
 private slots:
     void on_North_clicked();
@@ -41,14 +41,17 @@ private slots:
 
     void on_Help_clicked();
 
+
+    void on_pick_up_clicked();
+
 private:
     Ui::MainWindow *ui;
     ZorkUL *zork;
-    void inRoom(string direction);
+    void goRoom(string direction);
     Character character = *new Character("Jojo" , "Explorer");
-    bool placeInInventory;
+    bool putInInventory;
     void listItems(vector<Item> items , QString description);
-
+    void addItems(vector <Item> inventory , Item items );
 };
 
 #endif // MAINWINDOW_H

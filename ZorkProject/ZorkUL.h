@@ -14,9 +14,7 @@ class ZorkUL {
 private:
 	Parser parser;
 	Room *currentRoom;
-	void createRooms();
-	bool processCommand(Command command);
-    void goRoom(Command command);
+    void createRooms();
     void createItems();
     void displayItems();
     Room* roomList[6];
@@ -27,7 +25,8 @@ public:
     string printHelp();
 	void play();
     string go(string direction);
-    Room* getRoom();
+    Room getRoom();
+    void viewItems();
 };
 
 #endif /*ZORKUL_H_*/

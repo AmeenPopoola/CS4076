@@ -7,7 +7,7 @@
 using namespace std;
 
 class Item {
-private:
+protected:
 	string description;
 	string longDescription;
 	int weightGrams;
@@ -18,14 +18,13 @@ public:
     Item (string description, int inWeight, float inValue);
     Item (string description);
 	string getShortDescription();
-    string getLongDescription();
+    virtual string getLongDescription();
     bool operator==(Item &i);
 	int getWeight();
-	void setWeight(int weightGrams);
+template <typename T>
+         void setWeight( T& weight);
 	float getValue();
 	void setValue(float value);
-	int getWeaponCheck();
-	void setWeaponCheck(int weaponCheck);
 };
 
 #endif /*ITEM_H_*/

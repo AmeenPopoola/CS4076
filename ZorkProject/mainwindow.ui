@@ -81,7 +81,7 @@ font: 9pt &quot;Algerian&quot;;</string>
     <item row="3" column="2" colspan="2">
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
-       <widget class="QTextBrowser" name="inventory">
+       <widget class="QListWidget" name="listWidget">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -89,9 +89,9 @@ font: 9pt &quot;Algerian&quot;;</string>
          </sizepolicy>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 0, 0);
-font: 9pt &quot;Algerian&quot;;
-color: rgb(255, 255, 255);</string>
+         <string notr="true">font: 9pt &quot;Algerian&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 0, 0);</string>
         </property>
        </widget>
       </item>
@@ -131,24 +131,6 @@ color: rgb(255, 0, 0);</string>
     </item>
     <item row="4" column="2" colspan="2">
      <layout class="QHBoxLayout" name="horizontalLayout_4">
-      <item>
-       <widget class="QPushButton" name="Put">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(0, 0, 0);
-color: rgb(255, 0, 0);
-font: 9pt &quot;Algerian&quot;;</string>
-        </property>
-        <property name="text">
-         <string>PUT</string>
-        </property>
-       </widget>
-      </item>
       <item>
        <widget class="QPushButton" name="pick_up">
         <property name="sizePolicy">

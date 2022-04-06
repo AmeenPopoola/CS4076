@@ -1,4 +1,4 @@
-#include "mummy.h"
+/*#include "mummy.h"
 
 
 #include <string>
@@ -28,3 +28,4 @@ int mummy::getDamage(){
     return this ->damage;
 }
 
+*/
