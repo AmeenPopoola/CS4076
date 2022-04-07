@@ -10,9 +10,8 @@
 using namespace std;
 
 class ZorkUL {
-    friend class mainwindow;
+    friend class MainWindow;
 private:
-	Parser parser;
 	Room *currentRoom;
     void createRooms();
     void createItems();

@@ -1,4 +1,4 @@
-#ifndef MUMMY_H
+/*#ifndef MUMMY_H
 #define MUMMY_H
 
 #include <enemy.h>
@@ -23,3 +23,4 @@ public:
 };
 
 #endif // MUMMY_H
+*/

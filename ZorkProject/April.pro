@@ -5,29 +5,27 @@ CONFIG += console c++11
 SOURCES += \
         Artifact.cpp \
         Character.cpp \
-        Command.cpp \
-        CommandWords.cpp \
-        Parser.cpp \
         Room.cpp \
         ZorkUL.cpp \
         enemy.cpp \
+        image.cpp \
         item.cpp \
         main.cpp \
         mainwindow.cpp \
-        mummy.cpp
+        mummy.cpp \
+        wordle.cpp
 
 HEADERS += \
     Artifact.h \
     Character.h \
-    Command.h \
-    CommandWords.h \
-    Parser.h \
     Room.h \
     ZorkUL.h \
     enemy.h \
+    image.h \
     item.h \
     mainwindow.h \
-    mummy.h
+    mummy.h \
+    wordle.h
 
 
 

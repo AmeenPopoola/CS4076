@@ -12,22 +12,22 @@ Item::Item(string inDescription) {
 
 bool Item::operator==(Item &i)
 {
-    int test = 0;
+    int test = false;
 
     if (this->getShortDescription() == i.getShortDescription())
     {
-        test = 1;
+        test = true;
     }
 
     return test;
 }
 
-void Item::setWeight(int inWeightGrams)
-{
-    if (inWeightGrams > 9999 || inWeightGrams < 0)
-       cout << "weight invalid, must be 0<weight<9999" ;
+template<typename T>
+void Item::setWeight( T& weight){
+    if(weight > 100)
+        cout << "This exceeds the maximum damage , must be between 0 and 100)";
     else
-	   weightGrams = inWeightGrams;
+        weight = weightGrams;
 }
 
 void Item::setValue(float inValue)

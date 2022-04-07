@@ -14,7 +14,7 @@ class Artifact : public Item {
      ~Artifact();
      void setAge(int age);
      int getAge();
-     virtual string getLongDescription();
+     string getLongDescription();
 };
 
 #endif // ARTIFACT_H

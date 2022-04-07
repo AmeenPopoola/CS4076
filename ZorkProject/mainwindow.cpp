@@ -98,7 +98,7 @@ void MainWindow::endGame(string message){
     ui->South->setEnabled(false);
     ui->listWidget->setEnabled(false);
 
-    ui->textBox->setText(QString::fromStdString(character.description + " has " + message + ". You have succesfully escaped.\n"));
+    ui->textBox->setText(QString::fromStdString(character.description + " has " + message + ". You have succesfully escaped.\nUse The Quit Button To Exist The Game\n"));
 }
 
 void MainWindow::addToListWidget(vector<Item> item){
@@ -109,9 +109,6 @@ void MainWindow::addToListWidget(vector<Item> item){
                      ui->listWidget->addItem(QString::fromStdString(item[i].getShortDescription()));
                  }
              }
-             else {
-                 ui->textBox->setText(QString::fromStdString("There are no items in the room."));
-    }
     }
 }
 
@@ -119,10 +116,7 @@ void MainWindow::listItems(vector<Item> items, QString description) {
         if (!items.empty()) {
             addToListWidget(items);
         }
-        else {
-            ui->textBox->setText("No " + description + " items could be found.\n");
-        }
-    }
+}
 
 void MainWindow::on_pick_up_clicked()
 {

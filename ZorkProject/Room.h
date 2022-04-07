@@ -7,7 +7,7 @@
 #include "item.h"
 #include "enemy.h"
 using namespace std;
-using std::vector;
+using std::vector;//sequence containers that store elements for dynamic data
 
 class Room {
 

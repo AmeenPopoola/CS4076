@@ -1,7 +1,7 @@
 #include <iostream>
 #include "item.h"
 #include "Artifact.h"
-#include "image.h"
+//#include "image.h"
 //#include "enemy.h"
 //#include "mummy.h"
 #include "mainwindow.h"
@@ -62,7 +62,7 @@ string ZorkUL::printWelcome() {
 
 /** COMMANDS **/
 string ZorkUL::printHelp() {
-    return "\n*Use Direction Buttons(NSFW) to move\n*Pick Up Button to pick up item in Room\n*Help Button for info\n*Quit Button to quit game\n";
+    return "\n*Use Direction Buttons(NSFW) to move\n*Pick Up Button to pick up item in Room and send to musuem\n*Help Button for info\n*Quit Button to quit game\n";
 }
 
 
