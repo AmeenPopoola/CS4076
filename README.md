@@ -31,6 +31,4 @@ Arrays and pointers --> DONE--> ZorkUL
 
 Friendship-->DONE-->Room , MainWindow , Character
 
-Global Variable-->DONE
-
 Private, Public, Protected --> DONE
