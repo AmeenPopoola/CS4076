@@ -9,6 +9,8 @@ Virtual functions --> DONE --> Artifact,Item
 
 template classes --> DONE-->Item
 
+namespace --> MainWindow
+
 Operator overloading--> DONE-->Item
 
 Initializer List --> DONE-->Item
