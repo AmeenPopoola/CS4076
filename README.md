@@ -9,7 +9,7 @@ Virtual functions --> DONE --> Artifact,Item
 
 template classes --> DONE-->Item
 
-namespace --> MainWindow
+namespace --> DONE
 
 Operator overloading--> DONE-->Item
 
@@ -30,5 +30,7 @@ Header files (inclusion guards) --> DONE-->Header Files
 Arrays and pointers --> DONE--> ZorkUL
 
 Friendship-->DONE-->Room , MainWindow , Character
+
+Global Variable-->DONE
 
 Private, Public, Protected --> DONE
